@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.SAPPHIRE{
+    font-size: 200%;
+    margin: auto;
+    padding: 3px;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    font-stretch: expanded;
+    text-shadow: 2px 2px black;
+}
+
+.search-container{
+    display: inline;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 30px;
+    transition: 1s ease;
+    background-color: papayawhip;
+    transition: 1s ease;
+    padding: 5px;
+}
+
+.search{
+    width: 1.2%;
+    margin: 10px 10px;
+    border: none;
+    position: relative;
+    font-size: 16px;
+    font-family: sans-serif;
+    transition: 1s ease;
+    background-color: papayawhip;
+    outline: none;
+}
+.search:hover{
+    transition: 1s ease;
+    width: 40%;
+}
