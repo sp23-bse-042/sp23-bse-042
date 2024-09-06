@@ -4,19 +4,20 @@
     box-sizing: border-box;
 }
 .SAPPHIRE{
-    font-size: 200%;
-    margin: auto;
-    padding: 3px;
+    font-size: 120%;
+    margin: 10px;
+    padding: 10px;
     font-family: sans-serif;
     letter-spacing: 5px;
     text-shadow: 1px px black;
+    display: inline-block;
 }
 
 .search-container{
     display: inline;
     position: relative;
     width: 100%;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 0;
     border: 1px solid black;
     border-radius: 30px;
@@ -91,12 +92,36 @@
     display: inline;
     margin: 2%;
     position: relative;
-    padding: 2%;
 }
 
 .cart-icon{
     display: inline;
     margin: 2%;
     position: relative;
-    padding: 2%;
 }
+
+.nav1 .ul1{
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 10px 10px;
+    padding: 2px 2px;
+    justify-content: center;
+}
+
+.ul1 li a{
+    text-decoration: none;
+    margin: 0 15px 0 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+.ul1 li a:hover{
+    transition: 0.3s;
+    border: 1px solid red;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #4f1919,#ff3333);
+    color: white;
+    
+}
+
