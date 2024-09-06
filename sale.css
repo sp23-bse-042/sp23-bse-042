@@ -9,15 +9,15 @@
     padding: 3px;
     font-family: sans-serif;
     letter-spacing: 5px;
-    font-stretch: expanded;
-    text-shadow: 2px 2px black;
+    text-shadow: 1px px black;
 }
 
 .search-container{
     display: inline;
     position: relative;
     width: 100%;
-    margin: auto;
+    margin-left: 30px;
+    margin-top: 0;
     border: 1px solid black;
     border-radius: 30px;
     transition: 1s ease;
@@ -40,4 +40,63 @@
 .search:hover{
     transition: 1s ease;
     width: 40%;
+}
+
+    
+.dropdown{
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.dropdown .dropdown-text{
+    font-size: medium;
+    margin: 10px 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid rgb(75, 75, 75);
+    border-radius: 5px;
+    padding: 2px;
+    cursor: default;
+}
+
+.dropdown .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    margin-left: 15px;
+    border: 1px solid black;
+    
+}
+
+.dropdown-content a{
+    color: #140303;
+    margin: 12px 16px;
+    padding: 2px;
+    display: block;
+    text-decoration: none;
+    
+
+}
+
+.dropdown-content a:hover{
+    background-color: rgba(100, 166, 188, 0.507);
+
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.user-icon{
+    display: inline;
+    margin: 2%;
+    position: relative;
+    padding: 2%;
+}
+
+.cart-icon{
+    display: inline;
+    margin: 2%;
+    position: relative;
+    padding: 2%;
 }
