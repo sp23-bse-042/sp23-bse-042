@@ -3,35 +3,104 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: burlywood;
+}
 .SAPPHIRE{
-    font-size: 90%;
     position: relative;
     top: 10%;
     left: 5%;
     font-family: sans-serif;
     letter-spacing: 5px;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px transparent;
     display: inline-block;
+    transition: 1s ease;
 }
+
+@media screen and (max-width:282px) {
+    .SAPPHIRE{
+        font-size: 90%;
+        background: linear-gradient(65deg,#9d0908,#d00000);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@media screen and (min-width:283px) {
+    .SAPPHIRE{
+        font-size: 120%;
+        background: linear-gradient(45deg,#7e111198,#7f0c0c);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@media screen and (min-width:769px) {
+    .SAPPHIRE{
+        font-size: 130%;
+        background: linear-gradient(45deg,#7e111198,#7f0c0c);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@media screen and (min-width:1025px) {
+    .SAPPHIRE{
+        font-size: 250%;
+        background: linear-gradient(45deg,#7e111198,#7f0c0c);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+    }
+}
+
 
 .search-container{
     display: flex;
-    width: 11%;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
     position: relative;
-    top: 0.1vh;
-    left: 75vw;
-    bottom: 2vw;
+    width: 11%;
     border-radius: 10px;
-    background-color: #90E0EF;
+    background: linear-gradient(180deg,#dc2f02,#d00000);
     transition: 1s ease;
-    padding: 2px;
+    margin-right: 3px;
     outline: none;
 }
 
+@media  screen and (min-width:283px) {
+    
+.search-container{
+    align-items: flex-end;
+    }
+}
 
+@media  screen and (min-width:769px) {
+    
+    .search-container{
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+}    
+
+@media screen and (min-width:1025px) {
+    .search-container{
+        width: 15%;
+        height: 2%;
+        margin: 5px;
+    }
+}
 .search-container input{
     border: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration-color: #98c63b;
 }
 .search-container{
     display: flex;
@@ -54,16 +123,11 @@
     border: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
 .search-container:hover{
     transition: 1s ease;
     width: 90%;
     left: 3vw;
 }
-
-
-
 .search-container:hover i{
     left: 70vw;
 }
@@ -81,22 +145,83 @@
 .search-container:hover i{
     opacity: 0;
 }
+
 .dropdown{
     position: relative;
-    display: inline-block;
-    top: 1.2vh;
+    top: -1.5vh;
+    left: 3%;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-shrink: 0.2;
+    background-color: none;
+    font-size: x-large;
+    max-width: 40%;
 }
 
+@media screen and (min-width:283px) {
+    .dropdown{
+        top: -0.5vh;
+        justify-content: flex-start;
+        font-size: larger;
+        max-width: 50%;
+    }
+    
+}
+
+@media screen and (min-width:768px) {
+    .dropdown{
+        top: 0.2vh;
+        justify-content: flex-start;
+        align-content: center;
+        font-size: larger;
+        max-width: 50%;
+    }
+    
+}
+
+@media screen and (min-width:900px) {
+    .dropdown{
+        top: 0.2vh;
+        left: 4%;
+        justify-content: flex-start;
+        font-size: larger;
+        max-width: 50%;
+    }
+    
+}
+
+@media screen and (min-width:1400) {
+    .dropdown{
+        top: 1vh;
+        left: 4%;
+        justify-content: flex-start;
+        font-size: larger;
+        max-width: 50%;
+    }
+}
 .dropdown .dropdown-text{
-    font-size: medium;
+    font-size: 3vw;
     margin: 10px 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border: 1px solid rgb(75, 75, 75);
+    border: 2px inset rgb(216, 72, 72) ;
     border-radius: 5px;
     padding: 2px;
     cursor: default;
 }
 
+@media screen and (min-width:283px) {
+    .dropdown .dropdown-text{
+        font-size: 4vw;
+        margin: 10px 10px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border: 2px inset rgb(216, 72, 72) ;
+        border-radius: 5px;
+        padding: 1px;
+        cursor: default;
+    }
+    
+}
 .dropdown .dropdown-content{
     display: none;
     position: absolute;
@@ -105,7 +230,7 @@
     border: 1px solid black;
     border-radius: 5px;
     z-index: 1;
-    
+
 }
 
 .dropdown-content a{
@@ -114,32 +239,60 @@
     padding: 2px;
     display: block;
     text-decoration: none;
-    
-
 }
 
 .dropdown-content a:hover{
     background-color: rgba(100, 166, 188, 0.507);
-
+    transition: 1s ease;
 }
 
 .dropdown:hover .dropdown-content{
     display: block;
 }
 
-.user-icon{
-    display: inline;
-    margin: 2%;
+.icons{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10vw;
+    column-gap: 3vw;
     position: relative;
+    bottom: 2vh;
+    perspective: 1000px;
 }
 
-.cart-icon{
-    display: inline;
-    margin: 2%;
-    position: relative;
-
+.icons i{
+    font-size: 100%;
+    color: #87101c;
+    border: 2px inset rgb(216, 72, 72);
+    padding: 1vh 1vw;
+    transition: 1s ease,box-shadow 0.3 ease;
+    transform-style: preserve-3d;
 }
 
+@media screen and (min-width:283px) {
+    .icons{
+        margin-right: 15vw;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .icons{
+        margin-right: 15vw;
+    }
+    .icons i{
+        font-size: 3vw;
+    }
+}
+
+.icons i:hover{
+    transform: rotateX(10deg) rotateY(10deg) scale(1.5);
+    box-shadow: 0 3px 20px inset black;
+}
+
+.icons i:active{
+    transform:rotate(5deg) rotateY(5deg) scale(1.2);
+    box-shadow: 0 5px 15px inset black;
+}
 .nav1 .ul1{
     display: flex;
     list-style-type: none;
