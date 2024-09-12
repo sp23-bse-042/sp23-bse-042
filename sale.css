@@ -2,379 +2,173 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
-body{
-    background-color: burlywood;
+html{
+    scroll-behavior: smooth;
 }
-.SAPPHIRE{
-    position: relative;
-    top: 10%;
-    left: 5%;
-    font-family: sans-serif;
-    letter-spacing: 5px;
-    text-shadow: 1px 1px transparent;
-    display: inline-block;
-    transition: 1s ease;
+.header{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    padding: 2vh 5vw;
+    border-bottom: 1px solid black;
 }
 
-@media screen and (max-width:282px) {
-    .SAPPHIRE{
-        font-size: 90%;
-        background: linear-gradient(65deg,#9d0908,#d00000);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+.logo {
+    /* display: inline;
+    align-items: center; */
+    display: flex;
+    align-items: center;
+    flex: 1;
+    
+}
+.logo i{
+    font-size: 4vw;
+    margin: 2vw;
+}
+.logo h1{
+    font-size: 7vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.icons {
+    display: flex;
+    align-items: center;
+}
+.icons i{
+    margin: 2vw;
+    transition: rgb(27, 153, 175)  1s ease;
+    /* background: linear-gradient(45deg,#73b9cc,#8ba0a7, #53aec4); /* Gradient colors */
+    /* -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;  */ 
+    
+}
+
+
+.search-bar {
+    width: 100%;
+    border: 0.5px solid black;
+    margin: 0.5rem auto;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar>input{
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+@media (min-width:481px) {
+    .logo i{
+        font-size: 4vw;
+    }
+  
+    .logo h1{
+            font-size: 7vw;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    
+    .icons i{
+        font-size: 7vh;
+    }
+    .search-bar{
+        max-width: 100%;
+        padding: 1.5vh;
+        
     }
 }
 
-@media screen and (min-width:283px) {
-    .SAPPHIRE{
-        font-size: 120%;
-        background: linear-gradient(45deg,#7e111198,#7f0c0c);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-}
 
 @media screen and (min-width:769px) {
-    .SAPPHIRE{
-        font-size: 130%;
-        background: linear-gradient(45deg,#7e111198,#7f0c0c);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+    .logo i {
+        display: none;
     }
-}
-
-@media screen and (min-width:1025px) {
-    .SAPPHIRE{
-        font-size: 250%;
-        background: linear-gradient(45deg,#7e111198,#7f0c0c);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        position: relative;
+    .logo h1{
+        font-size: 7vw;
     }
-}
-
-
-.search-container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    overflow: hidden;
-    justify-content: center;
-    position: relative;
-    width: 11%;
-    border-radius: 10px;
-    background: linear-gradient(180deg,#dc2f02,#d00000);
-    transition: 1s ease;
-    margin-right: 3px;
-    outline: none;
-}
-
-@media  screen and (min-width:283px) {
-    
-.search-container{
-    align-items: flex-end;
+    .icons i{
+        font-size: 5vh;
     }
-}
-
-@media  screen and (min-width:769px) {
-    
-    .search-container{
-        display: flex;
-        flex-wrap: wrap;
-        overflow: hidden;
-    }
-}    
-
-@media screen and (min-width:1025px) {
-    .search-container{
-        width: 15%;
-        height: 2%;
-        margin: 5px;
-    }
-}
-.search-container input{
-    border: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration-color: #98c63b;
-}
-.search-container{
-    display: flex;
-    width: 10%;
-    position: relative;
-    top: 0.1vh;
-    left: 75vw;
-    bottom: 2vw;
-    border-radius: 10px;
-    background-color: #90E0EF;
-    transition: 1s ease;
-    padding: 2px;
-    outline: none;
-}
-
-.search-container i{
-    z-index: 1;
-}
-.search-container input{
-    border: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.search-container:hover{
-    transition: 1s ease;
-    width: 90%;
-    left: 3vw;
-}
-.search-container:hover i{
-    left: 70vw;
-}
-
-.search-container:hover input{
-    transition: 1s ease;
-    width: 90%;
-    left: 2vw;
-}
-
-.search-container:hover input{
-    left: 4vw;
-}
-
-.search-container:hover i{
-    opacity: 0;
-}
-
-.dropdown{
-    position: relative;
-    top: -1.5vh;
-    left: 3%;
-    display:flex;
-    justify-content: center;
-    align-content: center;
-    flex-shrink: 0.2;
-    background-color: none;
-    font-size: x-large;
-    max-width: 40%;
-}
-
-@media screen and (min-width:283px) {
-    .dropdown{
-        top: -0.5vh;
-        justify-content: flex-start;
-        font-size: larger;
-        max-width: 50%;
-    }
-    
-}
-
-@media screen and (min-width:768px) {
-    .dropdown{
-        top: 0.2vh;
-        justify-content: flex-start;
-        align-content: center;
-        font-size: larger;
-        max-width: 50%;
-    }
-    
-}
-
-@media screen and (min-width:900px) {
-    .dropdown{
-        top: 0.2vh;
-        left: 4%;
-        justify-content: flex-start;
-        font-size: larger;
-        max-width: 50%;
-    }
-    
-}
-
-@media screen and (min-width:1400) {
-    .dropdown{
-        top: 1vh;
-        left: 4%;
-        justify-content: flex-start;
-        font-size: larger;
-        max-width: 50%;
-    }
-}
-.dropdown .dropdown-text{
-    font-size: 3vw;
-    margin: 10px 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border: 2px inset rgb(216, 72, 72) ;
-    border-radius: 5px;
-    padding: 2px;
-    cursor: default;
-}
-
-@media screen and (min-width:283px) {
-    .dropdown .dropdown-text{
-        font-size: 4vw;
-        margin: 10px 10px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        border: 2px inset rgb(216, 72, 72) ;
-        border-radius: 5px;
-        padding: 1px;
-        cursor: default;
-    }
-    
-}
-.dropdown .dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: white;
-    margin-left: 15px;
-    border: 1px solid black;
-    border-radius: 5px;
-    z-index: 1;
-
-}
-
-.dropdown-content a{
-    color: #140303;
-    margin: 12px 16px;
-    padding: 2px;
-    display: block;
-    text-decoration: none;
-}
-
-.dropdown-content a:hover{
-    background-color: rgba(100, 166, 188, 0.507);
-    transition: 1s ease;
-}
-
-.dropdown:hover .dropdown-content{
-    display: block;
-}
-
-.icons{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 10vw;
-    column-gap: 3vw;
-    position: relative;
-    bottom: 2vh;
-    perspective: 1000px;
-}
-
-.icons i{
-    font-size: 100%;
-    color: #87101c;
-    border: 2px inset rgb(216, 72, 72);
-    padding: 1vh 1vw;
-    transition: 1s ease,box-shadow 0.3 ease;
-    transform-style: preserve-3d;
-}
-
-@media screen and (min-width:283px) {
-    .icons{
-        margin-right: 15vw;
+    .search-bar{
+        max-width: 100%;
+        padding: 1.5vh;
+        
     }
 }
 
 @media screen and (min-width:1200px) {
-    .icons{
-        margin-right: 15vw;
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr; /* Three columns */
+        align-items: center; /* Vertical alignment */
+        gap: 2vw; /* Add spacing between grid items */
+        padding: 0; /* Reduce padding to eliminate extra space */
+    }
+
+    .logo {
+        margin-left:2vw ;
+        grid-column: 1 / 2; 
+    }
+
+    .search-bar {
+        grid-column: 2 / 3; 
+        width: 100%;
+        margin-top: -20vh;
+        align-self: center; 
+    }
+
+    .icons {
+        grid-column: 3 / 4;
+        justify-content: space-evenly;
+    }
+
+    .logo h1{
+        font-size: 3vw;
+        font-weight: bolder;
     }
     .icons i{
-        font-size: 3vw;
+        font-size: 5vh;
+    }
+    .search-bar{
+        max-width: 85%;
+        padding: 1.5vh;
+        border-radius: 5px;
+        
     }
 }
 
-.icons i:hover{
-    transform: rotateX(10deg) rotateY(10deg) scale(1.5);
-    box-shadow: 0 3px 20px inset black;
-}
 
-.icons i:active{
-    transform:rotate(5deg) rotateY(5deg) scale(1.2);
-    box-shadow: 0 5px 15px inset black;
-}
-.nav1 .ul1{
-    display: flex;
-    list-style-type: none;
-    text-decoration: none;
-    margin: 10px 10px;
-    padding: 2px 2px;
-    justify-content: center;
-}
-
-.ul1 li a{
-    text-decoration: none;
-    margin: 0 15px 0 15px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: black;
-}
-
-.ul1 li a:hover{
-    transition: 0.3s;
-    border-radius: 4px;
-    background: linear-gradient(45deg, #48cae4,#ade8f4);
-    color: white;
-}
-
-.grid-container{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    height: 3vh;
-    background: linear-gradient(90deg,#6A040f,#9d0208);
-}
-
-.grid1{
-    grid-column : 1/2 ;
-    display: flex;
-    flex-direction: column;
     
+.inner-contact-us{
+    display: none;
+}
+.contact-us:hover{
+    .inner-contact-us{
+        display: block;
+    }
 }
 
-.grid2{
-    grid-column: 2/3;
-    display: flex;
-    flex-direction: column;
-    
+.inner-customer-care{
+    display: none;
+}
+.customer-care:hover{
+    .inner-customer-care{
+        display: block;
+    }
 }
 
-.end{
-    color: white;
-    font-size: clamp(1.5rem,3.5vw,3.5vw);
-    font-weight: bolder;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    letter-spacing: 3px;
-    transform: scaleY(2);
-    margin: 8%;
-    padding: 3%;
+.inner-information{
+    display: none;
 }
-
-.sale{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: papayawhip;
-    font-size:clamp(6rem,6vw,6rem);
-    font-weight: bolder;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    /* transform: scaleY(2); */
-    
-}
-
-.flat{
-    color: white;
-    background-color: black;
-    font-weight: bolder;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    max-width: 50%;
-    /* transform: scale(1.8,3); */
-    transform-origin: left;
-    margin-top: -24%;
-}
-
-.time{
-    color: white;
-    margin-top: 70%;
-    font-size: 1rem;
+.information:hover{
+    .inner-information{
+        display: block;
+    }
 }
