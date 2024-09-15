@@ -12,10 +12,12 @@ html{
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
     padding: 2vh 5vw;
     border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 .logo {
@@ -23,20 +25,25 @@ html{
     align-items: center; */
     display: flex;
     align-items: center;
-    flex: 1;
-    
+    flex: 1;  
 }
 .logo i{
     font-size: 4vw;
     margin: 2vw;
+   
+    
 }
 .logo h1{
     font-size: 7vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: sticky;
+    top: 0;
 }
 .icons {
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 .icons i{
     margin: 2vw;
@@ -45,6 +52,9 @@ html{
     /* -webkit-background-clip: text; 
     background-clip: text; 
     color: transparent;  */ 
+    position: sticky;
+    top: 0;
+    
     
 }
 
@@ -91,7 +101,7 @@ html{
         display: none;
     }
     .logo h1{
-        font-size: 7vw;
+        font-size: 5vw;
     }
     .icons i{
         font-size: 5vh;
@@ -120,7 +130,7 @@ html{
     .search-bar {
         grid-column: 2 / 3; 
         width: 100%;
-        margin-top: -20vh;
+        margin-top: -15vh;
         align-self: center; 
     }
 
@@ -143,32 +153,171 @@ html{
         
     }
 }
-
-
+.footer{
+    display: block;
+    justify-content: flex-start;
+    padding: 2vw;
+    background-color: #f2f5f4;
     
-.inner-contact-us{
-    display: none;
 }
-.contact-us:hover{
-    .inner-contact-us{
-        display: block;
+
+.footer summary{
+    font-size: 4vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 1000;
+    padding: 2vh;  
+    transform: scaleX(1.1);
+    transform-origin: left;
+    display: block;
+    cursor: pointer;
+    
+}
+.footer p{
+    font-size: 3vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    list-style: none;
+    padding: 1vh;  
+    opacity: 0.7;
+}
+.footer a{
+    text-decoration: none;
+    color: black;
+}
+
+.newsletter div{
+    display: block;
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 5px ;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.newsletter input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 1vh;
+    padding: 1vw;
+    border:none;
+    outline: none;
+    opacity: 1;
+    background-color: #f2f5f4;
+}
+.newsletter details div a{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: black;
+    
+    color: #f2f5f4;
+    border-radius: 5px;
+    padding: 2vh;
+}
+.newsletter details div a:hover{
+    background-color: rgb(53, 215, 255);
+    transition: 0.5s ease;
+}
+.newsletter details i{
+    margin: 2vw 2vh;
+}
+.fa-facebook-f:hover{
+    font-size: large;
+    color: blue;
+    transition: 0.3s ease;
+}
+.fa-instagram:hover{
+    font-size: large;
+    color: rgba(206, 38, 38, 0.938);
+    transition: 0.3s ease;
+}
+.fa-youtube:hover{
+    font-size: large;
+    color: red;
+    transition: 0.3s ease;
+}
+@media (min-width: 481px) {
+    .footer summary {
+        font-size: 3vw;
+    }
+    .footer p {
+        font-size: 2.5vw;
+    }
+    .newsletter div {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
 
-.inner-customer-care{
-    display: none;
+/* Screen size min-width: 768px */
+@media (min-width: 768px) {
+    .footer summary {
+        font-size: 2.5vw;
+    }
+    .footer p {
+        font-size: 2vw;
+    }
+    .newsletter div {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 }
-.customer-care:hover{
-    .inner-customer-care{
+@media (min-width: 1200px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 4vw;
+        gap: 20px;
+    }
+    .contact-us,
+    .customer-care,
+    .information,
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer summary {
         display: block;
+        font-size: medium;
+    }
+    .footer p {
+        font-size: 1vw;
+    }
+    .newsletter div {
+        width: 100%;
+        margin-left: 0;
     }
 }
 
-.inner-information{
-    display: none;
-}
-.information:hover{
-    .inner-information{
-        display: block;
+/* Screen size min-width: 1400px */
+@media (min-width: 1400px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 4vw;
+        gap: 20px;
+    }
+    .contact-us,
+    .customer-care,
+    .information,
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer summary {
+        display: block; /* Hide the summary tag */
+    }
+    .footer p {
+        font-size: 1.3vw;
+    }
+    .newsletter div {
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
     }
 }
