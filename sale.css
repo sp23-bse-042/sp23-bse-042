@@ -28,13 +28,11 @@ html{
     flex: 1;  
 }
 .logo i{
-    font-size: 4vw;
+    font-size: 6vw;
     margin: 2vw;
-   
-    
 }
 .logo h1{
-    font-size: 7vw;
+    font-size: 6vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: sticky;
     top: 0;
@@ -57,8 +55,6 @@ html{
     
     
 }
-
-
 .search-bar {
     width: 100%;
     border: 0.5px solid black;
@@ -127,6 +123,7 @@ html{
         grid-column: 1 / 2; 
     }
 
+
     .search-bar {
         grid-column: 2 / 3; 
         width: 100%;
@@ -153,6 +150,21 @@ html{
         
     }
 }
+
+.nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80%;
+    border: black;
+    background-color: #f2f5f4;
+    z-index: 1;
+    display: none;
+}
+
+
+
 .footer{
     display: block;
     justify-content: flex-start;
@@ -169,9 +181,9 @@ html{
     transform: scaleX(1.1);
     transform-origin: left;
     display: block;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
+
 .footer p{
     font-size: 3vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -205,37 +217,47 @@ html{
     opacity: 1;
     background-color: #f2f5f4;
 }
-.newsletter details div a{
+
+.newsletter button{
+    width: 100%;
     display: flex;
     justify-content: center;
     overflow: hidden;
     background-color: black;
-    
     color: #f2f5f4;
+    border: none;
     border-radius: 5px;
     padding: 2vh;
 }
-.newsletter details div a:hover{
+.newsletter details div button:hover{
     background-color: rgb(53, 215, 255);
     transition: 0.5s ease;
+    cursor: pointer;
 }
+.newsletter input:invalid:not(:placeholder-shown){
+    border-color: red;
+}
+
 .newsletter details i{
     margin: 2vw 2vh;
 }
 .fa-facebook-f:hover{
     font-size: large;
+    margin-top: -1vh;
     color: blue;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
 .fa-instagram:hover{
     font-size: large;
+    margin-top: -1vh;
     color: rgba(206, 38, 38, 0.938);
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
 .fa-youtube:hover{
     font-size: large;
+    margin-top: -1vh;
     color: red;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
 @media (min-width: 481px) {
     .footer summary {
